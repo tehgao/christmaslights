@@ -14,3 +14,9 @@ def index():
             ard.write("christmas")
         else:
             pass
+    return render_template('index.html')
+    if __name__ == "__main__":
+        # lets launch our webpage!
+        # do 0.0.0.0 so that we can log into this webpage
+        # using another computer on the same network later
+        app.run(host='0.0.0.0')
