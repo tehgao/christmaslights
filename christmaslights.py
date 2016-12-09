@@ -6,6 +6,7 @@ app = Flask(__name__)
 def index():
     ard = serial.Serial("/dev/ttyACM0", 9600);
     msg = ard.readline();
+    print(msg);
 
     if request.method == 'POST':
         if request.form['submit'] == 'rainbow':
