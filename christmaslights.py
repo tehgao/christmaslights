@@ -19,7 +19,7 @@ def command(cmd):
     if cmd == "rainbow":
         ard.write("rainbow\n")
     elif cmd == "christmas":
-        rd.write("christmas\n")
+        ard.write("christmas\n")
     else:
         pass
 
