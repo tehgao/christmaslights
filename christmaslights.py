@@ -11,7 +11,7 @@ def index():
         if request.form['submit'] == 'rainbow':
             ard.write("rainbow\n")
         elif request.form['submit'] == 'strobe':
-            ard.write("christmas")
+            ard.write("christmas\n")
         else:
             pass
     return render_template('index.html')
