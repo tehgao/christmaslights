@@ -1,7 +1,16 @@
 <!doctype html>
   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Christmas Lights</title>
+
+    <!-- Bootstrap -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
     <script>
       $(document).ready(function(){
         $("#rainbow").click(function(){
@@ -17,16 +26,16 @@
     </script>
   </head>
   <body>
-    <div id="page">
-      <div id="header">
+    <div class="container" id="page">
+      <div class="page-header" id="header">
         <h1>Christmas Lights</h1>
       </div>
       <div id="buttons">
-        <form  action="/" method="post">
-          <button value="rainbow" id="rainbow">Rainbow</button>
-          <button value="christmas" id="christmas">Christmas</button>
-          <button value="off" id="off">Turn Off</button>
-        </form>
+        <p>
+          <button type="button" class="btn btn-lg btn-default" value="rainbow" id="rainbow">Rainbow</button>
+          <button type="button" class="btn btn-lg btn-default" value="christmas" id="christmas">Christmas</button>
+          <button type="button" class="btn btn-lg btn-default" value="off" id="off">Turn Off</button>
+        </p>
       </div>
     </div>
   </body>
