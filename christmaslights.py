@@ -21,6 +21,6 @@ def command(cmd):
     elif cmd == "christmas":
         ard.write("christmas\n")
     else:
-        pass
+        ard.write("off\n");
 
     return "Wrote %s" % cmd
