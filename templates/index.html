@@ -1,6 +1,17 @@
 <!doctype html>
   <head>
     <title>Christmas Lights</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#rainbow").click(function(){
+          $.get("/rainbow");
+        });
+        $("#christmas").click(function(){
+          $.get("/christmas");
+        });
+      });
+    </script>
   </head>
   <body>
     <div id="page">
@@ -9,8 +20,8 @@
       </div>
       <div id="buttons">
         <form  action="/" method="post">
-          <p><input type="submit" name="rainbow" value="Rainbow"> </p>
-          <p><input type="submit" name="christmas" value="Strobe"> </p>
+          <button value="rainbow" id="rainbow">Rainbow</button>
+          <button value="christmas" id="christmas">Christmas</button>
         </form>
       </div>
     </div>
