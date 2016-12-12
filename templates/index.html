@@ -14,13 +14,22 @@
     <script>
       $(document).ready(function(){
         $("#rainbow").click(function(){
-          $.get("/rainbow");
+          $.get("/christmas/rainbow");
         });
         $("#christmas").click(function(){
-          $.get("/christmas");
+          $.get("/christmas/christmas");
         });
-        $("#off").click(function(){
-          $.get("/off");
+        $("#xmasoff").click(function(){
+          $.get("/christmas/off");
+        });
+        $("#cycle").click(function(){
+          $.get("/table/cycle");
+        });
+        $("#breathe").click(function(){
+          $.get("/table/breathe");
+        });
+        $("#tableoff").click(function(){
+          $.get("/table/off");
         });
       });
     </script>
@@ -34,7 +43,17 @@
         <p>
           <button type="button" class="btn btn-lg btn-default" value="rainbow" id="rainbow">Rainbow</button>
           <button type="button" class="btn btn-lg btn-default" value="christmas" id="christmas">Christmas</button>
-          <button type="button" class="btn btn-lg btn-default" value="off" id="off">Turn Off</button>
+          <button type="button" class="btn btn-lg btn-default" value="xmasoff" id="off">Turn Off</button>
+        </p>
+      </div>
+      <div class="page-header" id="header">
+        <h1>Coffee Table</h1>
+      </div>
+      <div id="buttons">
+        <p>
+          <button type="button" class="btn btn-lg btn-default" id="cycle">Cycle</button>
+          <button type="button" class="btn btn-lg btn-default" id="breathe">Breathe</button>
+          <button type="button" class="btn btn-lg btn-default" id="tableoff">Turn Off</button>
         </p>
       </div>
     </div>

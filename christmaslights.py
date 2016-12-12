@@ -2,6 +2,7 @@ import serial
 from flask import Flask, render_template, request, redirect, url_for
 app = Flask(__name__)
 ard = serial.Serial("/dev/ttyACM0", 9600);
+table = serial.Serial("/dev/ttyACM1", 9600);
 msg = ard.readline();
 print(msg);
 
@@ -14,8 +15,8 @@ def index():
         # using another computer on the same network later
         app.run(host='0.0.0.0')
 
-@app.route('/<cmd>')
-def command(cmd):
+@app.route('/christmas/<cmd>')
+def xmaslights(cmd):
     if cmd == "rainbow":
         ard.write("rainbow\n")
     elif cmd == "christmas":
@@ -25,4 +26,17 @@ def command(cmd):
     else:
         pass
 
-    return "Wrote %s" % cmd
+    return "Wrote %s to christmas lights" % cmd
+
+@app.route('/table/<cmd>')
+def coffeetable(cmd):
+    if cmd == "cycle":
+        table.write("cycle\n")
+    elif cmd == "breathe":
+        table.write("breathe\n")
+    elif cmd == "off":
+        table.write("off");
+    else:
+        pass
+
+    return "Wrote %s to coffee table" % cmd;
