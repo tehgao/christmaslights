@@ -35,7 +35,7 @@ def coffeetable(cmd):
     elif cmd == "breathe":
         table.write("breathe\n")
     elif cmd == "off":
-        table.write("off");
+        table.write("off\n");
     else:
         pass
 
